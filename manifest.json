@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI设计顾问",
+  "short_name": "AI设计顾问",
+  "version": "1.0.0",
+  "description": "蓝星AI工作室：上传或拍摄设计物料，获得设计、用户、营销和风险预判分析。",
+  "action": {
+    "default_title": "AI设计顾问"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "sidePanel"
+  ],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "options_page": "index.html",
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src https: http:;"
+  }
+}
